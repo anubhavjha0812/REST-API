@@ -1,9 +1,10 @@
 {
-  "name": "rest",
+  "name": "rest-api",
   "version": "1.0.0",
   "description": "An Express.js RESTful API project for managing posts with CRUD operations, utilizing Express, EJS, and UUID for unique identifiers",
   "main": "index.js",
   "scripts": {
+    "start":"node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
