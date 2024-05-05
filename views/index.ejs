@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Posts</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26"
+                        viewBox="0 -960 960 960" width="26">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg></a></li>
+            
+            <li>
+                <a href="Frontend\html\teachersReview.html">Teachers Review</a>
+            </li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Merchandise</a></li>
+            <li>
+                <a href="https://vtop.vitbhopal.ac.in/vtop/open/page">V-TOP</a>
+            </li>
+        </ul>
+        <ul>
+            <li class="sider"><a href="#">
+                    <h1 >Quora Posts</h1>
+                </a></li>
+            <li class="hideOnMobile">
+                <a href="Frontend\html\teachersReview.html">Teachers Review</a>
+            </li>
+            <li class="hideOnMobile"><a href="#">Services</a></li>
+            <li class="hideOnMobile"><a href="#">Merchandise</a></li>
+            <li class="hideOnMobile">
+                <a href="https://vtop.vitbhopal.ac.in/vtop/open/page">V-TOP</a>
+            </li>
+            <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                        height="26" viewBox="0 -960 960 960" width="26">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg></a></li>
+        </ul>
+    </nav>
+
+    <br>
+<div class="container">
+
+    <form action="/posts/new"><button>+ Create New Post</button></form>
+
+    <br>
+    <% for(post of posts){ %>
+        <div class="post" type="button" id="<%= post.id %>">
+            <h3 class="user">
+                @<%=post.username %>
+            </h3>
+            <h4 class="content">
+                <%= post.content %>
+            </h4>
+            <!-- <a href="http://localhost:8080/posts/<%= post.id%>">Individal post</a> -->
+            <a href="http://localhost:8080/posts/<%= post.id%>/edit">Edit</a>
+            <br>
+            <br>
+            <form method="post" action="/posts/<%= post.id  %>?_method=DELETE">
+                <button>Delete Post</button>
+            </form>
+
+        </div>
+        <br>
+        <% } %>
+</div>
+
+            <script src="/js/app.js"></script>
+</body>
+
+</html>

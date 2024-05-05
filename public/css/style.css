@@ -1,0 +1,118 @@
+h1 {
+    color: maroon;
+}
+
+.container{
+    /* background-color: black; */
+    padding: 10px;
+    padding-left: 30px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: black;
+    background-color: white;
+}
+.post {
+    background-color: blanchedalmond;
+    padding: 10px;
+}
+
+.post:hover{
+    border: 1px solid maroon;
+}
+
+.user {
+    font-style: italic;
+}
+
+.blink{
+    border: maroon 1px solid;
+}
+
+/* ------------------ */
+
+nav {
+    padding: 1%;
+    background-color: rgba(255, 255, 255, 0.235);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li {
+    height: 50px;
+    padding: 0 30px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+nav a:hover {
+    background-color: white;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.213);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+}
+
+@media(max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}
+
+main,
+aside {
+    padding: 2%;
+    color: black;
+}
+
+/* -------------------------*/
+
+
