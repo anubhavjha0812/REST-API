@@ -9,8 +9,6 @@
 </head>
 
 <body>
-
-
     <nav>
         <ul class="sidebar">
             <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26"
@@ -50,10 +48,12 @@
     <br>
 <div class="container">
 
-    <form action="/posts/new"><button>+ Create New Post</button></form>
-
+    <form action="/posts/new">
+        <button>+ Create New Post</button>
+    </form>
     <br>
     <% for(post of posts){ %>
+        
         <div class="post" type="button" id="<%= post.id %>">
             <h3 class="user">
                 @<%=post.username %>

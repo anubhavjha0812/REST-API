@@ -55,10 +55,7 @@ app.get("/posts/:id", (req, res) => {
     let { id } = req.params;
     let post = posts.find((item) => id === item.id);
     res.render("show.ejs", { post });
-
 });
-
-
 
 app.patch("/posts/:id", (req, res) => {
     let { id } = req.params;
